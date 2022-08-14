@@ -18,8 +18,12 @@ future, or present
 * The enability to edit timeblocks by adding events by clicking on them 
  and saving the text to the local storage after
 
+* Edited blocks are saved after editing
+
 ## Description
-To 
+
+To have the app correspond with the clients neccessities, I added the following:
+* 
 
 ## Preview of the Page
 
