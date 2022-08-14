@@ -1,13 +1,3 @@
-/*$("#current-date").datepicker({
-
-    minDate: 1
-});
-
-var dateFormat = $("#current-date").datepicker("option", "dateFormat");
-$("#current-date").datepicker("option", "dateFormat", "dd-mm-yyyy");
-
-//moved out of current date dp to test
-dateFormat: "(dd-mm-yyyy)"*/
 
 
 //fcurrent date function
@@ -24,7 +14,8 @@ function renderDate(){
     var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
     var montharray = new Array("Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec.");
     
-    /*var currentTime = new Date();
+    /*kept in, not sure if this is needed to update the date
+    var currentTime = new Date();
     var h = currentTime.getHours();
     var m = currentTime.getMinutes();
     var s = currentTime.getSeconds();
@@ -59,7 +50,7 @@ renderDate();
 //current date function
 
 
-/*
+/*short date function
 $( ".currentDate" ).datepicker({
     dateFormat: "yy-mm-dd"
 });
