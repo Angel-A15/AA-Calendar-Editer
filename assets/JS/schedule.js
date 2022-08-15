@@ -1,10 +1,10 @@
 
-//Display today's date in header
+//function used to display current date
 var todayDate = moment().format('MMM Do YYYY');
 $("#currentDay").html(todayDate);
 
 
-
+//function used to save added/edited content in text area
 $(document).ready(function() {
 
     $(".saveBtn").on("click", function(event){
@@ -20,6 +20,7 @@ $(document).ready(function() {
     
 })
 
+//function used to determine color for past, future, and present events
 function timeTracker(){
 
     var timeNow = moment().hours();

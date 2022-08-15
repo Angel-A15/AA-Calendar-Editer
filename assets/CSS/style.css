@@ -1,9 +1,11 @@
+/*adds style to entirity of body by default*/ 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
 }
-  
+
+/*adds color:black to the line that divides the hrs from textarea*/ 
 textarea{
     background: transparent;
     border: none;
@@ -12,7 +14,8 @@ textarea{
     border-left: 1px solid black;
     padding: 10px;
 }
-  
+
+/*styles the top of page:text*/ 
 .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -20,45 +23,53 @@ textarea{
     border-radius: 0;
     border-bottom: 10px solid black;
 }
-  
+
+/*adds style to text of hrs*/  
 .description{
     white-space: pre-wrap;
 }
-  
+
+/*styles the area and text alignment of hrs text area*/  
 .time-block{
     text-align: center;
     border-radius: 15px;
 }
-  
+
+/*adds style to view where textarea is*/ 
 .row {
   /*white-space: pre-wrap;*/
   margin: 20px;
   height: 80px;
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(0, 0, 0);
   
 }
-  
+
+/*adds style to text of hrs*/ 
 .hour {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
 }
-  
+
+/*adds style color:white to past tasks*/ 
 .past {
     background-color: #d3d3d3;
     color: white;
 }
-  
+
+/*adds style color:red to present tasks*/
 .present {
     background-color: #ff6961;
     color: white;
 }
-  
+
+/*adds style color:green to future tasks*/
 .future {
     background-color: #77dd77;
     color: white;
 }
-  
+
+/*Styles the button*/
 .saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
@@ -66,7 +77,8 @@ textarea{
     background-color: #06AED5;
     color: white;
 }
-  
+
+/*adds style to button when hovered*/
 .saveBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
