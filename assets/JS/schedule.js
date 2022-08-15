@@ -1,62 +1,40 @@
 
+//Display today's date in header
+var todayDate = moment().format('MMM Do YYYY');
+$("#currentDay").html(todayDate);
 
-//fcurrent date function
-function renderDate(){
-    var myDate = new Date();
-    var year = myDate.getYear();
-        if(year<1000){
-            year += 1900
-        }
 
-    var day = myDate.getDay();
-    var month= myDate.getMonth();
-    var dayM = myDate.getDate();
-    var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-    var montharray = new Array("Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec.");
+
+$(document).ready(function() {
+
+    $(".saveBtn").on("click", function(event){
+        // define the time and description variables 
+        var text = $(this).siblings("description").val();
+
+        var time = $(this).parent().attr("id");
+
+        //save to localStorage 
+        localStorage.setItem(text, time);
+
+    });
     
-    /*kept in, not sure if this is needed to update the date
-    var currentTime = new Date();
-    var h = currentTime.getHours();
-    var m = currentTime.getMinutes();
-    var s = currentTime.getSeconds();
-        if(h == 24){
-            h = 0;
-        } else if(h > 12){
-            h = h - 0;
+})
+
+function timeTracker(){
+
+    var timeNow = moment().hours();
+
+    //loop over time blocks until
+    $(".time-block").each(function() {
+
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+        if( timeNow > blockTIme) {
+            $(this).removeClass("future")
         }
 
-        if(h < 10){
-            h="0" + h;
-        }
-        
-        if(m < 10){
-            m="0" + m;
-        }
-        
-        if(s < 10){
-            s="0" + s;
-        }*/ //commented out to see if date will work without time
-        
-
-    var dateDis = document.getElementById("currentDate");
-    dateDis.textContent = "" +dayarray[day]+ " " +montharray[month]+ " " +dayM+ ", " +year;
-    dateDis.innerText = "" +dayarray[day]+ " " +montharray[month]+ " " +dayM+ ", " +year;
-
-    setTimeout("renderDate()", 1000);
-
+    }); // if else time is less than time 
+    //using if else if else statements to comapre the times
+    //well be using moment js 
+    //well be using the id hours of 
+    //were using past present future for requirements
 }
-
-renderDate();
-//current date function
-
-
-/*short date function
-$( ".currentDate" ).datepicker({
-    dateFormat: "yy-mm-dd"
-});
-  
-// Getter
-var dateFormat = $( ".currentDate" ).datepicker( "option", "dateFormat" );
- 
-// Setter
-$( ".currentDate" ).datepicker( "option", "dateFormat", "yy-mm-dd" );*/
