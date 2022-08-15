@@ -9,12 +9,11 @@ $(document).ready(function() {
 
     $(".saveBtn").on("click", function(event){
         // define the time and description variables 
-        var text = $(this).siblings("description").val();
+        var text = $(this).siblings(".description").val();
 
         var time = $(this).parent().attr("id");
-
         //save to localStorage 
-        localStorage.setItem(text, time);
+        localStorage.setItem(time, text);
 
     });
     
@@ -29,6 +28,7 @@ function timeTracker(){
     $(".time-block").each(function() {
 
         var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+        
         if( timeNow > blockTIme) {
             $(this).removeClass("future")
         }
