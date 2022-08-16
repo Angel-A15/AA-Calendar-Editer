@@ -25,17 +25,37 @@ function timeTracker(){
     var timeNow = moment().hours();
 
     //loop over time blocks until
-    $(".time-block").each(function() {
 
-        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+    $(".time-block").each(function() {
+        var timeBlockId = $(this).attr("id");
+        var timeBlock = parseInt(timeBlockId.split("hour")[1]);
+
+        debugger;
         
-        if( timeNow > blockTIme) {
-            $(this).removeClass("future")
+        
+        if( timeNow > timeBlock) {
+            $(this).addClass("past")
+
         }
 
-    }); // if else time is less than time 
-    //using if else if else statements to comapre the times
-    //well be using moment js 
-    //well be using the id hours of 
-    //were using past present future for requirements
+        if(timeNow < timeBlock) {
+            $(this).addClass("future")
+        }
+
+        if(timeNow === timeBlock) {
+            $(this).addClass("present")
+        }
+
+        var timeBlockText = localStorage.getItem(timeBlockId)
+        
+        if(timeBlockText== null) return
+
+        console.log(timeBlockText);
+
+        $(this).children(".description").val(timeBlockText)
+
+
+    });
 }
+
+timeTracker();
