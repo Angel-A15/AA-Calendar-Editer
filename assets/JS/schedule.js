@@ -30,7 +30,6 @@ function timeTracker(){
         var timeBlockId = $(this).attr("id");
         var timeBlock = parseInt(timeBlockId.split("hour")[1]);
 
-        debugger;
         
         
         if( timeNow > timeBlock) {
@@ -58,4 +57,5 @@ function timeTracker(){
     });
 }
 
+//invokes timetracker function
 timeTracker();
