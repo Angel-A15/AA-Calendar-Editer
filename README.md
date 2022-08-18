@@ -26,7 +26,7 @@ To have the app correspond with the clients neccessities, I added the following:
 
 * Added html elements that correspong with the existing CSS style selectors
 
-* Connected the HTML doc with a JS script; added functons composed of traditional
+* Linked the HTML doc to the JS file; added functons composed of traditional
  JS and JQuery to add:
   * current date
   * time block event colors
