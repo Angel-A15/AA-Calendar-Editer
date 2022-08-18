@@ -27,4 +27,8 @@ To have the app correspond with the clients neccessities, I added the following:
 
 ## Preview of the Page
 
+![Web capture_17-8-2022_19141_angel-a15 github io](https://user-images.githubusercontent.com/106582411/185264200-d2b7a403-02a6-4bde-9b73-b9011a964f7a.jpeg)
+
 ## URL link to the app
+
+https://angel-a15.github.io/calendar-editer-yay/
