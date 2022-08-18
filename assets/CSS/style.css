@@ -47,7 +47,7 @@ textarea{
 
 /*adds style to text of hrs*/ 
 .hour {
-    background-color: #ccecee;
+    background-color: white;
     color: #000000;
     border-top: 1px dashed #000000;
 }
